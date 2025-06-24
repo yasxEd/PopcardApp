@@ -5,7 +5,7 @@ A modern **React Native** application for managing and rewarding customer loyalt
 
 <div align="center">
 
-  <img src="https://github.com/user-attachments/assets/51a89bad-2c0a-4366-b9c4-6fa12226fd29" alt="icon" width="200" />
+  <img src="https://github.com/user-attachments/assets/a7d5e3c7-eaa7-4c0f-aad7-d722c36033f5" alt="icon" width="200" />
 
 </div>
 
@@ -91,16 +91,20 @@ flowchart TD
 ### 🖼️ Screenshots
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/f8559e14-6286-4662-b7a9-276dd68c8e5d" alt="Mobile Home Screen" width="253"/>
+  <img width="385" alt="Screenshot 2025-06-22 at 15 07 24" src="https://github.com/user-attachments/assets/16e9451b-df25-4bfe-b402-87f1859a0c8b" />
+<img width="376" alt="Screenshot 2025-06-22 at 14 21 51" src="https://github.com/user-attachments/assets/428bbb7c-8e9f-4165-ab95-a3b282e65010" />
 
-  <img src="https://github.com/user-attachments/assets/5c29efc2-b3f9-455f-ae6a-fdff3be307d5" alt="QR Code Scanner" width="250"/>
 </div>
 
 ---
 
 ### 🎬 Video Demo
 
-[![Web Dashboard Demo]](https://github.com/user-attachments/assets/72e62149-ddf4-439a-a123-c2ecb6c38d59)
+
+
+https://github.com/user-attachments/assets/cadea92e-997e-4b02-97f7-a2794e1e05c7
+
+
 
 
 ## Getting Started
