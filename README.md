@@ -91,7 +91,7 @@ flowchart TD
 ### 🖼️ Screenshots
 
 <div align="center">
-  <img width="385" alt="Screenshot 2025-06-22 at 15 07 24" src="https://github.com/user-attachments/assets/16e9451b-df25-4bfe-b402-87f1859a0c8b" />
+  <img width="381" alt="Screenshot 2025-06-22 at 15 07 24" src="https://github.com/user-attachments/assets/16e9451b-df25-4bfe-b402-87f1859a0c8b" />
 <img width="376" alt="Screenshot 2025-06-22 at 14 21 51" src="https://github.com/user-attachments/assets/428bbb7c-8e9f-4165-ab95-a3b282e65010" />
 
 </div>
