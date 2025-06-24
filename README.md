@@ -1,7 +1,13 @@
 # Mobile Loyalty App
 
-A modern **React Native** application for managing and rewarding customer loyalty.  
-Bootstrapped with [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+A modern **React Native** application for managing and rewarding customer loyalty. Bootstrapped with [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+
+
+<div align="center">
+
+  <img src="https://github.com/user-attachments/assets/51a89bad-2c0a-4366-b9c4-6fa12226fd29" alt="icon" width="200" />
+
+</div>
 
 ---
 
@@ -14,7 +20,6 @@ Bootstrapped with [`@react-native-community/cli`](https://github.com/react-nativ
 - [Getting Started](#getting-started)
 - [Troubleshooting](#troubleshooting)
 - [Learn More](#learn-more)
-- [Contributing](#contributing)
 
 ---
 
@@ -37,11 +42,7 @@ App (React Native)
 ├── State Management (Redux / Context API)
 │
 ├── Services (API, Storage, Notifications)
-│
-└── Data Layer (Models, DTOs)
 ```
-
-> **Note:** Replace with your actual architecture diagram if available.
 
 ---
 
@@ -51,55 +52,56 @@ Below is a high-level flow of how users interact with the app:
 
 ```mermaid
 flowchart TD
-    A[Launch App] --> B{Authenticated?}
-    B -- No --> C[Login/Register Screen]
-    C --> D[Home Screen]
-    B -- Yes --> D[Home Screen]
-    D --> E[View Rewards]
-    D --> F[Scan QR Code]
-    D --> G[View Profile]
-    E --> H[Redeem Points]
-    F --> I[Earn Points]
-    G --> J[Edit Profile]
-    H --> D
-    I --> D
-    J --> D
+    A[Launch App] --> A1[Splash Screen]
+    A1 --> D[Home Screen]
+    
+    D --> BNB[Bottom Navigation Bar]
+    
+    BNB --> D
+    BNB --> S[Settings]
+
+    D --> CI[Client Icon]
+    CI --> CL[Client List]
+
+    D --> NFC[NFC Card]
+    D --> QR[QR Card]
+
+    NFC --> AP[Add Points to Client]
+    QR --> AP
+
+    AP --> D
+    CL --> D
+    S --> D
+
 ```
 
 - **Launch App**: User opens the app.
-- **Authentication**: If not logged in, user is prompted to log in or register.
-- **Home Screen**: Central hub for navigation.
-- **Rewards/QR/Profile**: Users can view rewards, scan QR codes to earn points, or manage their profile.
-- **Redeem/Earn/Edit**: Actions loop back to the Home Screen.
+- **Splash Screen**:  Brief loading screen displayed after launch.
+- **Home Screen**: Main hub for user interaction, shown after the splash screen.
+- **Bottom Navigation Bar**: Allows navigation between Home and Settings screens.
+- **Client Icon**: Located on the Home Screen; tapping it opens the Client List.
+- **NFC Card / QR Card**: Tapping either option takes the user to the Add Points to Client screen.
+- **Client List / Add Points / Settings**: After completing actions, the user is returned to the Home Screen.
 
----
-
-## Features
-
-- User authentication & registration
-- Earn and redeem loyalty points
-- View transaction history
-- Personalized offers & notifications
-- QR code scanning for quick rewards
-- Multi-platform support (iOS & Android)
 
 ---
 
 ## Demo
 
-### 🎬 Video Demo
-
-<!-- Place your video demo link or embedded video here -->
-[![Watch the demo](https://img.youtube.com/vi/your-demo-video-id/0.jpg)](https://your-demo-video-link.com)
-
 ### 🖼️ Screenshots
 
-<!-- Add screenshots of your app below -->
-| Home Screen | Rewards | QR Scanner |
-|-------------|---------|------------|
-| ![Home](./assets/screenshots/home.png) | ![Rewards](./assets/screenshots/rewards.png) | ![QR](./assets/screenshots/qr.png) |
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/f8559e14-6286-4662-b7a9-276dd68c8e5d" alt="Mobile Home Screen" width="253"/>
+
+  <img src="https://github.com/user-attachments/assets/5c29efc2-b3f9-455f-ae6a-fdff3be307d5" alt="QR Code Scanner" width="250"/>
+</div>
 
 ---
+
+### 🎬 Video Demo
+
+[![Web Dashboard Demo]](https://github.com/user-attachments/assets/72e62149-ddf4-439a-a123-c2ecb6c38d59)
+
 
 ## Getting Started
 
@@ -166,18 +168,6 @@ If you encounter issues, refer to the [React Native Troubleshooting Guide](https
 - [Integration Guide](https://reactnative.dev/docs/integration-with-existing-apps)
 - [Blog](https://reactnative.dev/blog)
 - [@facebook/react-native GitHub](https://github.com/facebook/react-native)
-
----
-
-## Contributing
-
-We welcome contributions! Please open issues or submit pull requests.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/YourFeature`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/YourFeature`)
-5. Open a pull request
 
 ---
 
