@@ -1,97 +1,184 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Mobile Loyalty App
 
-# Getting Started
+A modern **React Native** application for managing and rewarding customer loyalty.  
+Bootstrapped with [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## Table of Contents
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- [Overview](#overview)
+- [Architecture](#architecture)
+- [Features](#features)
+- [Demo](#demo)
+- [Getting Started](#getting-started)
+- [Troubleshooting](#troubleshooting)
+- [Learn More](#learn-more)
+- [Contributing](#contributing)
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+---
+
+## Overview
+
+The **Mobile Loyalty App** enables businesses to reward their customers with points, discounts, and special offers.  
+Customers can track their loyalty status, redeem rewards, and receive personalized promotions.
+
+---
+
+## Architecture
+
+The app follows a modular architecture for scalability and maintainability.
+
+```
+App (React Native)
+│
+├── Presentation Layer (UI Components, Screens)
+│
+├── State Management (Redux / Context API)
+│
+├── Services (API, Storage, Notifications)
+│
+└── Data Layer (Models, DTOs)
+```
+
+> **Note:** Replace with your actual architecture diagram if available.
+
+---
+
+### App Flow Diagram
+
+Below is a high-level flow of how users interact with the app:
+
+```mermaid
+flowchart TD
+    A[Launch App] --> B{Authenticated?}
+    B -- No --> C[Login/Register Screen]
+    C --> D[Home Screen]
+    B -- Yes --> D[Home Screen]
+    D --> E[View Rewards]
+    D --> F[Scan QR Code]
+    D --> G[View Profile]
+    E --> H[Redeem Points]
+    F --> I[Earn Points]
+    G --> J[Edit Profile]
+    H --> D
+    I --> D
+    J --> D
+```
+
+- **Launch App**: User opens the app.
+- **Authentication**: If not logged in, user is prompted to log in or register.
+- **Home Screen**: Central hub for navigation.
+- **Rewards/QR/Profile**: Users can view rewards, scan QR codes to earn points, or manage their profile.
+- **Redeem/Earn/Edit**: Actions loop back to the Home Screen.
+
+---
+
+## Features
+
+- User authentication & registration
+- Earn and redeem loyalty points
+- View transaction history
+- Personalized offers & notifications
+- QR code scanning for quick rewards
+- Multi-platform support (iOS & Android)
+
+---
+
+## Demo
+
+### 🎬 Video Demo
+
+<!-- Place your video demo link or embedded video here -->
+[![Watch the demo](https://img.youtube.com/vi/your-demo-video-id/0.jpg)](https://your-demo-video-link.com)
+
+### 🖼️ Screenshots
+
+<!-- Add screenshots of your app below -->
+| Home Screen | Rewards | QR Scanner |
+|-------------|---------|------------|
+| ![Home](./assets/screenshots/home.png) | ![Rewards](./assets/screenshots/rewards.png) | ![QR](./assets/screenshots/qr.png) |
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/)
+- [React Native CLI](https://reactnative.dev/docs/environment-setup)
+- [Android Studio](https://developer.android.com/studio) and/or [Xcode](https://developer.apple.com/xcode/) for emulators
+
+### 1. Install Dependencies
 
 ```sh
-# Using npm
-npm start
+yarn install
+# or
+npm install
+```
 
-# OR using Yarn
+### 2. Start Metro Bundler
+
+```sh
 yarn start
+# or
+npm start
 ```
 
-## Step 2: Build and run your app
+### 3. Run the App
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
+#### Android
 
 ```sh
-# Using npm
-npm run android
-
-# OR using Yarn
 yarn android
+# or
+npm run android
 ```
 
-### iOS
+#### iOS
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+Install CocoaPods dependencies (first time or after native deps update):
 
 ```sh
-bundle install
+cd ios && pod install && cd ..
 ```
 
-Then, and every time you update your native dependencies, run:
+Then run:
 
 ```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
 yarn ios
+# or
+npm run ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+---
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## Troubleshooting
 
-## Step 3: Modify your app
+If you encounter issues, refer to the [React Native Troubleshooting Guide](https://reactnative.dev/docs/troubleshooting).
 
-Now that you have successfully run the app, let's make changes!
+---
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## Learn More
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+- [React Native Docs](https://reactnative.dev/docs/getting-started)
+- [Integration Guide](https://reactnative.dev/docs/integration-with-existing-apps)
+- [Blog](https://reactnative.dev/blog)
+- [@facebook/react-native GitHub](https://github.com/facebook/react-native)
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+---
 
-## Congratulations! :tada:
+## Contributing
 
-You've successfully run and modified your React Native App. :partying_face:
+We welcome contributions! Please open issues or submit pull requests.
 
-### Now what?
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a pull request
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+---
 
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Happy Coding! 🚀**
